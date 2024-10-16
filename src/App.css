@@ -1,38 +1,74 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  display: flex;
+  background-color: rgba(140, 147, 247, 0.559);
+  max-height: 100vh;
+  flex-direction: column; /* Make sure the children are vertically aligned */
+  padding:10px;
+  padding-top:0px;
+  padding-bottom:0px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.main-card {
+  background-color: rgb(252, 252, 252);
+  border-radius: 30px;
+  box-shadow: 2px 1px #888888;
+  padding: 10px;
+  flex: 1 1 auto; /* Allow the main-card to grow but not exceed the parent's height */
+  max-height: 100%; /* Prevent it from growing too much */
+  overflow: auto; /* Enable scroll if content overflows */
+  width:300px;
+  margin-bottom:10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fish-card {
+  background-color: rgb(252, 252, 252);
+  border-radius: 30px;
+  box-shadow: 2px 1px #888888;
+  flex: 1 1 auto; /* Allow the main-card to grow but not exceed the parent's height */
+  max-height: 100%; /* Prevent it from growing too much */
+  margin-bottom:10px;
+  padding:10px;
+  max-width:300px;
+}
+
+.fish-region-header{
+  margin-bottom:0px;
+  margin-top:0px;
+}
+
+.fish-card-name{
+  text-decoration:underline;
+  font-weight:bold
+}
+
+.fish-card-subtitle{
+  margin-top:0px;
+}
+
+.region-box{
+  display:flex;
+  flex-direction: column;
+  margin-bottom:10px;
+}
+
+.navbar{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.fish-page-container{
+  overflow:auto;
+  padding-left:10px;
+  padding-right:10px;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
 }
